@@ -89,7 +89,7 @@ function Sidebar({
   const fetchAIPrediction = async (features) => {
     try {
       setAiLoading(true);
-      const res = await fetch("http://127.0.0.1:5000/ai_classify", {
+      const res = await fetch("https://geoshield-1.onrender.com/ai_classify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features }),

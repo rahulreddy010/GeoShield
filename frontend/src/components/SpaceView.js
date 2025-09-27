@@ -163,7 +163,7 @@ export default function SpaceView({ satellites = [], setSatellites }) {
       // else: poll backend every 5s
       const fetchAndSet = async () => {
         try {
-          const res = await fetch("http://127.0.0.1:5000/live_satellites");
+          const res = await fetch("https://geoshield-1.onrender.com/live_satellites");
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const data = await res.json();
           const sats = Object.entries(data || {}).map(([name, sat], idx) => {
