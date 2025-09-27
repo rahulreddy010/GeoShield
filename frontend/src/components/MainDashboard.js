@@ -73,7 +73,7 @@ function MainDashboard({ onLogout }) {
       const csvFiles = ["plane1.csv", "plane2.csv", "plane3.csv"];
       const signature = await hashHMAC(csvFiles.join(","), "supersecretkey");
 
-      const res = await fetch("http://localhost:5000/live_planes_multi", {
+      const res = await fetch("https://geoshield-1.onrender.com/live_planes_multi", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ csv_files: csvFiles, signature }),
