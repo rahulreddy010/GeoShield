@@ -1,4 +1,20 @@
+# --- Core Backend ---
 flask
-pandas
-geopy
 flask-cors
+gunicorn
+requests
+
+# --- AI/ML ---
+numpy
+pandas
+scikit-learn
+scipy
+joblib
+
+# --- Satellite ---
+sgp4
+
+# --- Mapping (safe extras, optional but useful) ---
+folium
+geopy
+branca
